@@ -1,0 +1,269 @@
+html{
+    scroll-behavior: smooth;
+}
+.toaster {
+    top:100px;
+    position: fixed;
+    right: 0px;
+    z-index: 2;
+    text-align: center;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 20px 20px 20px 20px;
+    background-color: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    transition: right 0.3s, visibility 0.3s, opacity 0.3s;
+}
+.toaster-visible{
+    right: 40px;
+    visibility: visible;
+    opacity: 0.8;
+}
+.toaster-success{
+    background-color: rgb(41, 172, 41);
+}
+.toaster-error{
+    background-color: rgb(184, 16, 16);
+}
+.top-nav{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
+    z-index: 1;
+    background-color: cornsilk;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    margin-right: 2rem;
+    margin-bottom: 0;
+}
+.nav-icon{
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    margin-left: 4px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: auto;
+    z-index: 2;
+    box-shadow: 5px 3px 3px rgb(71, 70, 70);
+}
+ul.nav-list > li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    font-size: 2rem;
+    justify-content: flex-end;
+}
+.nav-list a{
+    display: block;
+    font-size: 16px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+@media only screen and (max-width: 600px) {
+    .nav-list a{
+        font-size: 10px;
+    }
+    .nav-icon{
+        width: 60px;
+        height: 60px;
+    }
+}
+.nav-list a:hover{
+    text-decoration: none;
+    background-color: darkgray;
+    color: whitesmoke;
+    transition: 0.3s ease-out;
+}
+.welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+.welcome-heading{
+    font-size: 7rem;
+    top: 100px;
+    margin-bottom: 50px;
+    font-family: 'Bebas Neue', cursive;
+}
+.seperator{
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;;
+}
+.about-me>div> p{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.9rem;
+}
+.second-headings{
+    font-size: 5rem;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+}
+.third-headings{
+    padding: 30px;
+    font-family: 'Mukta', sans-serif;
+}
+.explonation{
+    font-size: 1.8rem;
+    padding: 10px;
+    font-family: 'PT Serif', serif;
+}
+.table-container{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.roman-table{
+    border: 1px solid #ddd;
+}
+.roman-calculator{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    border: 1px solid #ddd;
+    box-shadow: 5px 10px 8px #888888;
+
+}
+.roman-calculator > div > label{
+    width: 127px;
+}
+#funcOutput{
+    width: 178px;
+    height: 26px;
+    margin-bottom: 0px;
+}
+@media only screen and (max-width: 317px) {
+    .roman-calculator > div > input{
+        width: 50%;
+    }
+    
+}
+input:focus::placeholder {
+    color: transparent;
+}
+.color-generator{
+    text-align: center;
+    width: 60%;
+    height: 122px;
+    margin: auto;
+    border: 1px solid #ddd;
+    box-shadow: 5px 10px 8px #888888;
+    font-size: 16px;
+    font-style: bold;
+}
+.backgroundColor{
+    margin-top: 10px;
+}
+.certificates{
+    width: 60%;
+    border: 1px solid #ddd;
+    box-shadow: 5px 10px 8px #888888;
+}
+.certificate-container > div{
+    justify-content: center;
+    display: flex;
+}
+.certificate-container > div > a > h6{
+    font-size: 2rem;
+    color: rgb(23, 158, 199 / 80%);
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s ease-out;
+}
+.certificate-container > div > a:hover {
+    text-decoration: none;
+    color: rgb(13, 0, 126);
+}
+.icon-container{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.icon-container > a:hover{
+    top: 5px;
+    color: rgb(13, 0, 126);
+}
+.icon-container > a {
+    position: relative;
+    font-size: 2rem;
+    color: rgb(23, 158, 199 / 80%);
+    top: 0px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transition: top 0.5s, color 0.3s;
+}
+.mail-me{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 4rem;
+    border: 1px solid #ddd;
+    box-shadow: 5px 10px 8px #888888;
+}
+.mail-me{
+    padding: 20px 40px 20px 40px;
+}
+.email-info{
+    display: grid;
+    margin-bottom: 18px;
+}
+.email-info > span {
+    margin-bottom: 10px
+}
+.email-info > input {
+    padding-left: 10px;
+}
+.email-text{
+    display: grid;
+}
+.email-text > span {
+    margin-bottom: 10px;
+}
+.email-text > textarea {
+    padding: 10px;
+}
+.mail-button-container{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mail-button-container button {
+    margin-right: 10px;
+}
+.mail-button-container span {
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+textarea:focus::placeholder {
+    color: transparent;
+}
+.bottom-seperator{
+    width: 100%;
+    height: 2px;
+    background-color:rgb(93, 98, 112);
+}
+.footer-contact {
+    padding: 10px;
+    font-family: 'PT Serif', serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
