@@ -314,7 +314,6 @@
             };
             if(tempParams.from_name !== "" && tempParams.message !== ""){
                 emailjs.send('service_r9hjkd8', 'template_5sws4ul', tempParams).then(function(res){
-                    console.log(res.status);
                     if(res.status > 199 && res.status < 300){
                         toaster.textContent = "Your mail has been sent.";
                         toaster.className = 'toaster toaster-visible toaster-success';
