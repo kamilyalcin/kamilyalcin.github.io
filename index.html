@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamil YALCIN</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+    </style>
+</head>
+
+<body>
+    <!-- START TOASTER -->
+    <div class="toaster" id="toaster"></div>
+    <!-- END TOASTER -->
+    <!-- TOP NAVIGATION BAR -->
+    <img src="/IMG_0107.JPG" alt="my_photo" class="nav-icon">
+    <nav class="top-nav">
+        <ul class="nav-list">
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#myWork">Projects</a></li>
+            <li><a href="#my-certificates">Certificates</a></li>
+            <li><a href="#contact-me">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- END NAVIGATION BAR -->
+
+    <!-- START WELCOME SECTION -->
+    <section id="about-me" class="welcome-section">
+        <h1 class="welcome-heading">Kamil Yalcin</h1>
+        <div class="container-fluid about-me">
+            <div class="row">
+                <p class="col-xs-4">Hi! This is Kamil Yalçın. I am 26 years old and I live in İstanbul.</p>
+                <p class="col-xs-4 seperator">I am a student of Electrical and Electronics Engineering in Altınbaş
+                    University.</p>
+                <p class="col-xs-4">In this web-page I included what I have learned so far about HTML, CSS, JavaScript
+                    and
+                    Bootstrap.</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- END WELCOME SECTION -->
+
+    <!-- START MY WORK SECTION -->
+    <section class="project-section" id="myWork">
+        <h2 class="second-headings text-center">My Projects</h2>
+        <br>
+        <br>
+        <!-- START ROMAN NUMERAL CONVERTER -->
+        <div>
+            <h4 class="third-headings">Roman Numeral Converter</h4>
+            <p class="explonation">Roman numerals are a numeral system that originated in ancient Rome and remained the
+                usual way of writing
+                numbers throughout Europe well into the Late Middle Ages. Since roman numerals doesn't include number 0
+                and has a limited potential of representing numbers, it is inefficient to do math. Yet it is widely used
+                for artistic purposes.</p>
+            <p class="explonation">Here you can find my converter app which converts an Arabic numeral in the range
+                between 1 and 3999, to
+                its equivalent Roman numeral. </p>
+            <br>
+            <div class="table-container">
+                <table class="table table-striped roman-table">
+                    <tr>
+                        <td>Symbol</th>
+                        <td>I</td>
+                        <td>V</td>
+                        <td>X</td>
+                        <td>L</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>M</td>
+                    </tr>
+                    <tr>
+                        <td>Value</td>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>500</td>
+                        <td>1000</td>
+                    </tr>
+                </table>
+            </div>
+            <br><br>
+            <div class="container-fluid roman-calculator">
+                <div class="row" style="margin-top: 10px;">
+                    <label>Enter a number:</label>
+                    <input type="text" id="number" placeholder="1-3999" class="text-center"></input>
+                </div>
+                <div class="row" style="margin: 10px 0 10px 0;">
+                    <label>Roman Equivalent:</label>
+                    <p id="funcOutput" style="display: inline-block; font-size: 2rem;">---</p>
+                </div>
+                <button style="margin-bottom: 10px;" type="button" id="roman-btn" class="btn btn-block"
+                    onclick="convertToRoman();">Convert to
+                    Roman</button>
+            </div>
+            <br>
+            <p class="explonation">What I have learned in the making of this app:
+            <ul>
+                <li>JS <code>document.getElementById()</code> method.</li>
+                <li>JS <code>.textContent method.</code></li>
+                <li>JS <code>.value</code> method.</li>
+                <li>HTML <code>onclick="";</code> property.</li>
+            </ul>
+            </p>
+        </div>
+        <br><br>
+        <hr>
+        <!-- END ROMAN NUMERAL CONVERTER -->
+
+        <!-- START RANDOM COLOR GENERATOR -->
+        <div>
+            <h4 class="third-headings">Random Color Generator</h4>
+            <p class="explonation">A simple app to generate random colors.</p>
+            <br>
+            <div id="bgColorGenerator" class="color-generator">
+                <p class="backgroundColor text-center">Current Color:<br><span id="currentColor">#FFFFFF</span></p>
+                <button style="width: 80%;" id="colorBtn" class="btn">Change the Color</button>
+            </div>
+            <br><br>
+            <p class="explonation">What I have learned in the making of this app:
+            <ul>
+                <li>JS <code>.addEventListener()</code> method.</li>
+                <li>JS <code>Math.Random</code> and <code>Math.floor</code> method.</li>
+            </ul>
+            </p>
+        </div>
+        <br><br>
+        <hr>
+        <!-- END RANDOM COLOR GENERATOR -->
+
+        <!-- START QUIZ APP -->
+        <div>
+            <h4 class="third-headings">Quiz App</h4>
+            <p class="explonation">A simple quiz app which tells your score.</p>
+            <div class="quiz-container">
+                <ul>
+                    <p id="question"></p>
+                    <li>
+                        <input type="radio" id="a" class="answers" name="answers">
+                        <label for="a" id="first_text"></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="b" class="answers" name="answers">
+                        <label for="b" id="second_text"></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="c" class="answers" name="answers">
+                        <label for="c" id="third_text"></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="d" class="answers" name="answers">
+                        <label for="d" id="fourth_text"></label>
+                    </li>
+                    
+                </ul>
+                <button id="quizBtn">Submit</button>
+            </div>
+        </div>
+        <hr>
+        <!-- END QUIZ APP -->
+
+        <!-- START CERTIFICATES DIV -->
+        <div id="my-certificates">
+            <h2 class="second-headings text-center">Certificates</h4>
+                <br>
+                <br>
+                <P class="explonation">Here you can find my freecodecamp.org certificates.</P>
+                <br>
+                <div class="container-fluid certificates">
+                    <div class="row certificate-container">
+                        <div class="col-sm-6">
+                            <a href="https://www.freecodecamp.org/certification/kamil_yalcin/responsive-web-design">
+                                <h6>Responsive Web Design</h6>
+                                <img src="/responsive-desing-image.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="">
+                                <h6>JavaScript Algorithms </h6>
+                                <img src="/js-logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <br><br>
+        <hr>
+        <!-- END CERTIFICATES DIV -->
+    </section>
+    <!-- END MY WORK SECTION -->
+
+    <!-- START CONTACT SECTION -->
+    <div id="contact-me">
+        <div class="icon-container">
+            <a href="https://www.linkedin.com/in/kamil-yal%C3%A7%C4%B1n-13a343227/" class="btn footer-"
+                target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/kamilyalcin" class="btn" target="_blank"><i class="fa fa-github"></i>GitHub</a>
+            <a href="#mail-me" class="btn"><i class="fa fa-at"></i>Mail Me</a>
+        </div>
+        <br><br>
+        <div class="mail-me" id="mail-me">
+            <form action="#mail-me" id="mail-form" onsubmit="return false">
+                <div class="email-info">
+                    <span for="from-who">Enter your e-mail adress</span>
+                    <input style="height: 40px;" type="e-mail" id="from-who" placeholder="example@mail.com"
+                        required></input>
+                </div>
+                <div class="email-text">
+                    <span for="message">Let me know what I can do for you</span>
+                    <textarea style="resize: none;" type="textarea" id="message" placeholder="Enter your message..."
+                        rows="10" required></textarea>
+                </div>
+                <div class="mail-button-container">
+                    <button type="sumbit" class="btn btn-primary" onclick='sendMail();'><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope-open" viewBox="0 0 16 16">
+                            <path
+                                d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l5.75 3.45L8 8.917l1.25.75L15 6.217V5.4a1 1 0 0 0-.53-.882l-6-3.2ZM15 7.383l-4.778 2.867L15 13.117V7.383Zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734ZM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2Z" />
+                        </svg>
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- END CONTACT SECTION -->
+
+    <!-- FOOTER -->
+    <div class="bottom-seperator"></div>
+    <footer>
+        <p class="explonation text-center" style="font-size: 1.1rem;">This portfolio page is a non-profit page and
+            contains no trading purposes.</p>
+        <div class="footer-contact">
+            <p style="padding-right: 15px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-google"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                </svg>
+                <span style="padding-left:5px;">yalcinn.kamil@gmail.com</span>
+            </p>
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                </svg>
+                <span style="padding-left:5px;">+90 542 512 0995</span>
+            </p>
+        </div>
+    </footer>
+
+
+
+
+
+    <script>
+        let funcOutput = document.getElementById("funcOutput");
+
+        function convertToRoman() {
+            var num = document.getElementById("number").value;
+            let numberCatch = /\D/g;
+            console.log(num.match(numberCatch));
+            if (num.match(numberCatch) == null) {
+                if (num > 0 && num < 4000) {
+                    var romanValues = {
+                        M: 1000,
+                        CM: 900,
+                        D: 500,
+                        CD: 400,
+                        C: 100,
+                        XC: 90,
+                        L: 50,
+                        XL: 40,
+                        X: 10,
+                        IX: 9,
+                        V: 5,
+                        IV: 4,
+                        I: 1
+                    }
+                    let result = "";
+
+                    for (var key in romanValues) {
+                        while (num >= romanValues[key]) {
+                            result += key;
+                            num -= romanValues[key];
+                        }
+                    }
+                    funcOutput.textContent = result;
+                } else {
+                    return funcOutput.textContent = "Invalid Input.";
+                }
+            } else {
+                return funcOutput.textContent = "Invalid Input.";
+            }
+        }
+        const button = document.getElementById("colorBtn");
+        const currentColor = document.getElementById("currentColor");
+        const bgColor = document.getElementById("bgColorGenerator");
+        let hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+        button.addEventListener("click", function () {
+            let hexColor = "#";
+            for (var i = 0; i < 6; i++) {
+                hexColor += hex[getRandom()];
+                currentColor.textContent = hexColor;
+                bgColor.style.backgroundColor = hexColor;
+            }
+            function getRandom() {
+                return Math.floor(Math.random() * hex.length);
+            }
+        });
+    </script>
+
+    <script>
+        const quizQuestions = [
+            {
+                question: 'What is 3*3 ?',
+                a: '6',
+                b: '9',
+                c: '12',
+                d: '15',
+                correct: 'b'
+            },
+            {
+                question: 'What is our home galaxy?',
+                a: 'Andromeda Galaxy',
+                b: 'Black Eye Galaxy',
+                c: 'Malin 1 Galaxy',
+                d: 'Milky Way Galaxy',
+                correct: 'd'
+            },
+            {
+                question: 'What is the currency of Turkish Republic?',
+                a: 'Ruble',
+                b: 'Lira',
+                c: 'Dollar',
+                d: 'Riyal',
+                correct: 'b'
+            },
+            {
+                question: 'Where does the name "Coffee Mocha" comes from?',
+                a: 'Yemen',
+                b: 'Brazil',
+                c: 'Colombia',
+                d: 'Mexico',
+                correct: 'a'
+            }
+        ];
+        var toaster = document.getElementById("toaster");
+        const question = document.getElementById("question");
+        const firstOpt = document.getElementById("first_text");
+        const secondOpt = document.getElementById("second_text");
+        const thirdOpt = document.getElementById("third_text");
+        const fourthOpt = document.getElementById("fourth_text");
+        const quizBtn = document.getElementById("quizBtn");
+        let currentQuestion = 0;
+        let quizScore = 0;
+        const answers = document.querySelectorAll('.answers');
+        loadQuiz();
+        quizBtn.addEventListener('click', () => {
+            scoreCount();
+            if(currentQuestion < quizQuestions.length){
+            loadQuiz();
+            } else {
+                toaster.textContent = "You have scored " + quizScore + " points." ;
+                toaster.className = 'toaster toaster-visible toaster-info';
+                var moveAway = setTimeout(hideToaster, 4000);
+                currentQuestion = 0;
+                quizScore = 0;
+                loadQuiz();
+            }
+        });
+        function loadQuiz() {
+            question.textContent = quizQuestions[currentQuestion].question;
+            firstOpt.textContent = quizQuestions[currentQuestion].a;
+            secondOpt.textContent = quizQuestions[currentQuestion].b;
+            thirdOpt.textContent = quizQuestions[currentQuestion].c;
+            fourthOpt.textContent = quizQuestions[currentQuestion].d;
+        }
+        function scoreCount () {
+            answers.forEach((ans) => {
+                if(ans.checked){
+                    currentQuestion++;
+                    if(ans.id === quizQuestions[currentQuestion - 1].correct){
+                        quizScore++;
+                    }
+                    document.getElementById(ans.id).checked = false;
+                } 
+            })
+        }
+        function hideToaster() {
+                toaster.classList.remove('toaster-visible');
+            }
+    </script>
+
+    <script>
+        function sendMail(params) {
+            var tempParams = {
+                from_name: document.getElementById("from-who").value,
+                to_name: "Kamil",
+                message: document.getElementById("message").value
+            };
+            if (tempParams.from_name !== "" && tempParams.message !== "") {
+                emailjs.send('service_r9hjkd8', 'template_5sws4ul', tempParams).then(function (res) {
+                    if (res.status > 199 && res.status < 300) {
+                        toaster.textContent = " Your mail has been sent.";
+                        toaster.className = 'toaster toaster-visible toaster-success';
+                        var fadeAway = setTimeout(hideToaster, 4000);
+                        document.getElementById("mail-form").reset();
+                    } else {
+                        toaster.textContent = "Failed to send";
+                        toaster.className = 'toaster toaster-visible toaster-error';
+                        var hideAway = setTimeout(hideToaster, 4000);
+                    }
+                });
+            }
+            function hideToaster() {
+                toaster.classList.remove('toaster-visible');
+            }
+        }
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_XZN9khDfNMZwCx2kajCe5");
+        })();
+    </script>
+</body>
+
+</html>
