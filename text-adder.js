@@ -18,7 +18,6 @@ function pushLetters() {
             j = 0;
         }
     }
-    console.log(i, j);
 }
 
 pushLetters();
